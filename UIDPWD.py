@@ -26,7 +26,7 @@ def Validate_password(pswd):                                     #Validate if Gi
         return False
     
     
-def verification(test_mail):                                  #'verification' function return True if given mailID already exist,False otherwise
+def verification(test_mail):                                  #'verification' function return True if given mailID already exist in DataBase User.txt,False otherwise
     DB=os.path.isfile('User.txt')                       
     if(DB):                                                   # 'DB' variable return True Check if 'Database file User.txt' containing 'UserId and Password' exist
         f=open("User.txt","r")
