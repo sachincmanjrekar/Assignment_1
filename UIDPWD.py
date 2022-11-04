@@ -17,7 +17,7 @@ def Validate_emailid(email):                                     #Validate if Gi
 
 
 
-def Validate_password(pswd):                                     #Validate if Given 'MailID' matches with minimum criteria
+def Validate_password(pswd):                                     #Validate if Given 'Password' matches with minimum criteria
     pattern_2 =  "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#@$!%*?&])[A-Za-z\d@#$!%*?&]{5,16}$"
     result_2 = re.match(pattern_2, pswd)
     if(result_2):
