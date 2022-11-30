@@ -27,9 +27,9 @@ def Validate_password(pswd):                                     #Validate if Gi
     
     
 def verification(test_mail):                                  #'verification' function return True if given mailID already exist in DataBase User.txt,False otherwise
-    DB=os.path.isfile('User.txt')                       
+    DB=os.path.isfile('https://github.com/sachincmanjrekar/Assignment_1/blob/main/User.txt')                       
     if(DB):                                                   # 'DB' variable return True Check if 'Database file User.txt' containing 'UserId and Password' exist
-        f=open("User.txt","r")
+        f=open("https://github.com/sachincmanjrekar/Assignment_1/blob/main/User.txt","r")
         result_3=False
         for line in f:            
             line=line.rstrip()                                 #By default rstrip removes white spaces at the tail end
@@ -68,7 +68,7 @@ def reg():                                                      #Reg() function 
     
     if(RESULT_1 and not EXIST and RESULT_2):                    #If Given maiiID doesn't exist in database,Both new mailID and password is valid, then it will Register
         str=test_mail+" "+test_password+"\n"                    #create new string by joining 'EmailId' and 'Password' with space and add newline character(\n) at the end of it
-        f=open("User.txt",'a')                            #Append this newstring
+        f=open("https://github.com/sachincmanjrekar/Assignment_1/blob/main/User.txt",'a')                            #Append this newstring
         f.write(str)
         f.close()
         print("\n***Registration is Successful***\n")
@@ -90,7 +90,7 @@ def login():                                                    # login() functi
         elif(RESULT_3 and not RESULT_2):
             print("\nUser name FOUND, but Password does not match")
         elif(RESULT_3 and RESULT_2):
-            f=open("User.txt","r")
+            f=open("https://github.com/sachincmanjrekar/Assignment_1/blob/main/User.txt","r")
             for line in f:
                 line=line.rstrip()
                 a=line.split()
@@ -112,9 +112,9 @@ def retrive_password():                                         #retrive_passwor
     
     if RESULT_1:
         exist=False
-        DB=os.path.isfile('User.txt')
+        DB=os.path.isfile('https://github.com/sachincmanjrekar/Assignment_1/blob/main/User.txt')
         if(DB):
-            f=open("User.txt","r")
+            f=open("https://github.com/sachincmanjrekar/Assignment_1/blob/main/User.txt","r")
             for line in f:
                 line=line.rstrip()
                 a=line.split()
@@ -140,7 +140,7 @@ def set_password():                                                #set_password
     elif(RESULT_1 and not RESULT_3):
         print("\n\nGiven Email address is not Registerd, Please Register first")
     elif(RESULT_1 and RESULT_3):
-        fel=open("User.txt","r")
+        fel=open("https://github.com/sachincmanjrekar/Assignment_1/blob/main/User.txt","r")
         g=fel.readlines()
         t=[]
         PWD_Reset=False
@@ -166,7 +166,7 @@ def set_password():                                                #set_password
         fel.close()
 
         if(PWD_Reset):                  #if New password valid,then only update it.
-            f=open("User.txt","w")
+            f=open("https://github.com/sachincmanjrekar/Assignment_1/blob/main/User.txt","w")
             f.writelines(t)
             print("******Password reset successfully******")
             f.close()
